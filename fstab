@@ -4,15 +4,22 @@
 # device; this may be used with UUID= as a more robust way to name devices
 # that works even if disks are added and removed. See fstab(5).
 #
-# <file system>                           <mount point>   <type>       <options>           <dump>  <pass>
+# <file system>                                <mount point>   <type>       <options>                                             <dump>  <pass>
 
 # / was on /dev/sda5 during installation
-UUID=6bae5b4f-d09f-44ba-997b-cf38bb3e3642 /               ext4         errors=remount-ro   0       1
+UUID=6bae5b4f-d09f-44ba-997b-cf38bb3e3642      /               ext4         errors=remount-ro                                     0       1
 # /home was on /dev/sda6 during installation
-UUID=ff41b614-3d9f-417b-a46f-329ee6bf5592 /home           ext4         defaults            0       2
+UUID=ff41b614-3d9f-417b-a46f-329ee6bf5592      /home           ext4         defaults                                              0       2
 # swap was on /dev/sda7 during installation
-UUID=983716e8-cb67-42db-af70-22f4ada71921 none            swap         sw                  0       0
+UUID=983716e8-cb67-42db-af70-22f4ada71921      none            swap         sw                                                    0       0
 
-/dev/sr0                                  /media/cdrom0   udf,iso9660  user,noauto         0       0
-/dev/sdb1                                 /media/usb0     auto         rw,user,noauto      0       0
-/dev/sdb2                                 /media/usb1     auto         rw,user,noauto      0       0
+/dev/sr0                                       /media/cdrom0   udf,iso9660  user,noauto                                           0       0
+/dev/sdb1                                      /media/usb0     auto         rw,user,noauto                                        0       0
+/dev/sdb2                                      /media/usb1     auto         rw,user,noauto                                        0       0
+
+UUID="9834B76134B740D4"                        /mnt/win_c      ntfs-3g      auto,users,uid=1000,gid=100,dmask=027,fmask=137,utf8  0       0
+UUID="7A4F0FAE74F63A0D"                        /mnt/win_d      ntfs-3g      auto,users,uid=1000,gid=100,dmask=027,fmask=137,utf8  0       0
+
+
+
+
